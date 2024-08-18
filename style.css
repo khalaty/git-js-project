@@ -87,7 +87,7 @@
     padding: 12px 24px;
     border: 1px solid #87a3a6;
     border-radius: 6px;
-    width: 50%;
+    width: 48%;
     margin-top: 9px;
   }
   .button-radio lable{
@@ -97,8 +97,10 @@
     display: flex;
     flex-wrap: wrap;
   }
-  .radiosection:nth-child(2), .radiosection:nth-child(3){
-    width: 48% !important;
+  .myradios {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
   }
   
   textarea {
@@ -114,6 +116,11 @@
     font-size: 14px;
     margin-top: 5px;
   }
+  form input.error,
+  form select.error {
+  border-color: #f91919;
+  background: #f9f0f1;
+}
   
   .submit-btn {
     background-color: hsl(169, 82%, 27%);
@@ -155,6 +162,29 @@
       padding: 10px;
     }
   }
+  @media only screen and (max-width: 1000px) {
+    #contact-form{
+      flex-direction: row;
+    }
+  }
+  @media only screen and (max-width: 1000px) {
+    .form-group:nth-child(1),.form-group:nth-child(2) {
+      width: 100%;
+  }
+  }
+  @media only screen and (max-width: 1000px) {
+    .button-radio {
+      width: 100%;
+  }
+  }
+  @media only screen and (max-width: 1000px) {
+    .myradios{
+    flex-direction: column;
+  }
+  }
+  
+  
+  
 
   input[type="text"]:hover,input[type="text"]:focus,
   input[type="email"]:hover,input[type="email"]:focus,
@@ -168,9 +198,6 @@
     outline: 0;
   }
 
-  /* style.css */
-
-/* ... other existing styles ... */
 
 .success-message {
   background-color:#2b4246;
