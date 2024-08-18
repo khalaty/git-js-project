@@ -22,6 +22,12 @@ form.addEventListener("submit", (event) => {
     document.getElementById("firstNameError").textContent = "";
     firstNameInput.classList.remove("error");
   }
+  // if (!firstNameInput.value.trim()) {
+  // console.log("first name not filled");
+  // document.getElementById("firstNameError").textContent =
+  //   "This field must be completed.";
+  // firstNameInput.classList.add("error");
+  // }
 
   // Last Name Validation
   if (!lastNameInput.value.trim()) {

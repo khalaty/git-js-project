@@ -121,6 +121,16 @@
   border-color: #f91919;
   background: #f9f0f1;
 }
+.error {
+  background-color: red;
+  color: red;
+  border: 1ps solid red;
+}
+.error input[type="text"]{
+  background-color: red;
+  color: red;
+  border: 1ps solid red;
+}
   
   .submit-btn {
     background-color: hsl(169, 82%, 27%);
