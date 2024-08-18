@@ -1,0 +1,197 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  :root {
+    --color-primary: #dff1e7;
+    --color-normal: #0c7d69;
+    --color-light: #87a3a6;
+    --color-choosed: #2b4246;
+    --color-warning: #fbbe23;
+    --color-error: rgb(215, 60, 60);   
+}
+  
+  body {
+    font-family: 'Karla', sans-serif;
+    background-color: #d9ffdc99;
+    color: hsl(187, 24%, 22%);
+    padding: 20px;
+  }
+  
+  /* Form container styles */
+  .form-container {
+    max-width: 700px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 16px;
+    margin-top: 52px;
+  }
+  .form-container h1{
+    font-size: 28px;
+    color: #253825;
+    font-weight: 700;
+    margin-bottom: 32px;
+  }
+  
+  /* Form group styles */
+  #contact-form {
+    display: flex;
+    flex-direction: row;
+    gap: 0px 8px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .form-group {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .form-group:nth-child(1) {
+    width: 48%;
+  }
+  .form-group:nth-child(2) {
+    width: 48%;
+  }
+  label {
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--color-choosed);
+    width: 100%;
+  }
+  
+  .required {
+    color: hsl(0, 66%, 54%);
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea,
+  select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid hsl(186, 15%, 59%);
+    border-radius: 4px;
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    margin-top: 5px;
+  }
+  input[type="checkbox"] {
+    accent-color: #0c7d69
+  }
+  .button-radio {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 12px 24px;
+    border: 1px solid #87a3a6;
+    border-radius: 6px;
+    width: 50%;
+    margin-top: 9px;
+  }
+  .button-radio lable{
+    margin-bottom: 0px;
+  }
+  .radiosection{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .radiosection:nth-child(2), .radiosection:nth-child(3){
+    width: 48% !important;
+  }
+  
+  textarea {
+    height: 100px;
+  }
+  .conset-message {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .error-message {
+    color: hsl(0, 66%, 54%);
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  .submit-btn {
+    background-color: hsl(169, 82%, 27%);
+    color: hsl(0, 0%, 100%);
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .submit-btn:hover,
+  .submit-btn:focus {
+    background-color: hsl(148, 38%, 91%);
+    color: hsl(169, 82%, 27%);
+  }
+  
+  .success-message {
+    background-color: hsl(148, 38%, 91%);
+    color: hsl(169, 82%, 27%);
+    padding: 20px;
+    text-align: center;
+    border-radius: 4px;
+  }
+  
+  .success-message.hidden {
+    display: none;
+  }
+  input[type="radio" i] {
+    accent-color: #0c7d69;
+  }
+
+  
+  /* Responsive styles */
+  @media (max-width: 375px) {
+    body {
+      padding: 10px;
+    }
+  }
+
+  input[type="text"]:hover,input[type="text"]:focus,
+  input[type="email"]:hover,input[type="email"]:focus,
+  textarea:hover, textarea:focus, select:hover,  select:focus{
+    border: 1px solid #0c7d69 !important;
+    outline: 0;
+  }
+  .button-radio:hover, .button-radio:focus, .button-radio:active{
+    border: 1px solid #0c7d69 !important;
+    background-color: var(--color-primary);
+    outline: 0;
+  }
+
+  /* style.css */
+
+/* ... other existing styles ... */
+
+.success-message {
+  background-color:#2b4246;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  text-align: left;
+}
+
+.success-message h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+.success-message p {
+  margin-bottom: 0;
+  margin-top: 12px;
+  font-size: 0.9rem;
+}
+
+.hidden {
+  display: none;
+}

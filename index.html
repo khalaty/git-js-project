@@ -2,46 +2,62 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Contact form</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+  <div id="success-message" class="success-message hidden">
+    <h2>Message Sent!</h2>
+    <p>Thanks for completing the form. We'll be in touch soon!</p>
+  </div>
+  <div class="form-container" method="post" action="sendmail.php"">
+    <h1>Contact Us</h1>
+    <form id="contact-form">
+      <div class="form-group">
+        <label for="firstName">First Name <span class="required">*</span></label>
+        <input type="text" id="firstName" name="firstName">
+        <div class="error-message" id="firstNameError"></div>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name <span class="required">*</span></label>
+        <input type="text" id="lastName" name="lastName">
+        <div class="error-message" id="lastNameError"></div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address <span class="required">*</span></label>
+        <input type="email" id="email" name="email" required>
+        <div class="error-message" id="emailError"></div>
+      </div>
+      <div class="form-group radiosection">
+        <label>Query Type <span class="required">*</span></label>
+        <div class="button-radio">
+          <input type="radio" id="general" name="queryType" value="general" required>
+          <label for="general">General Enquiry</label>
+        </div>
+        <div class="button-radio">
+          <input type="radio" id="support" name="queryType" value="support" required>
+          <label for="support">Support Request</label>
+        </div>
+        <div class="error-message" id="queryTypeError"></div>
+      </div>
+      <div class="form-group">
+        <label for="message">Message <span class="required">*</span></label>
+        <textarea id="message" name="message" required></textarea>
+        <div class="error-message" id="messageError"></div>
+      </div>
+      <div class="form-group conset-message">
+        <input type="checkbox" id="consent" name="consent" required>
+        <label for="consent">I consent to being contacted by the team</label>
+        <div class="error-message" id="consentError"></div>
+      </div>
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
 
-  Contact Us
-
-  First Name
-  This field is required
-
-  Last Name
-  This field is required
-
-  Email Address
-  Please enter a valid email address
-  This field is required
-
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
-
-  Message
-  This field is required
-
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
-
-  Submit
-
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
+  </div>
+  <script src="./script.js"></script>
 </body>
 </html>
